@@ -87,8 +87,9 @@ img.opciones{
 
 p.menu{
   //background-color: #fff0e0;
-  font-weight: bold;
+  //font-weight: bold;
   font-size: 20px;
+  color:red
 
 
 }

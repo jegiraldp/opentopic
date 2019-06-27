@@ -1,3 +1,3 @@
 module.exports.ver=function(){
-  return "hola";
+  return "hola desde hola.js";
 };
