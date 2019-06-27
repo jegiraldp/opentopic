@@ -8,6 +8,12 @@
   </head>
   <body>
     <center>
+      <div id="divrespuesta">
+        <% if (rta) { %>
+          <p> ¡¡ <%= rta %> !!</p>
+        <% } %>
+      </div>
+      <div id="diverror"></div>
       <div id="formu">
     <form id="f1" action="/registrarcurso" method="post">
       <table border="0" id="tablaR">
@@ -39,14 +45,7 @@
       </table>
     </form>
   </div>
-
-    <div id="divrespuesta">
-      <% if (rta) { %>
-        <p> ¡¡ <%= rta %> !!</p>
-      <% } %>
-    </div>
-    <div id="diverror"></div>
-    <script src="js/registrarcurso.js"></script>
+<script src="js/registrarcurso.js"></script>
 
     </center>
 

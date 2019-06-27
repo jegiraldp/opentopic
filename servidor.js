@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
 
 app.get('/',(req,res)=> {
-  res.render('index.ejs');
+  const rta=0;
+  res.render('index.ejs',{rta:rta});
 });
 
 app.get('/curso',(req,res)=> {
@@ -36,10 +37,10 @@ app.post('/registrarcurso',(req,res)=> {
   const promesaReg=reg.registro(nc,ncc,cc,d,letra,fecha);
   promesaReg.then(function(rta){
   rta="Curso: " + nc + " - Registrado Correctamente ";
-  res.render('registrarcurso.ejs',{rta:rta});
+  res.render('index.ejs',{rta:rta});
 }).catch(function(rta){
   rta="-- ATENCIÓN --: "+nc + " - YA ESTÁ REGISTRADO .. ";
-  res.render('registrarcurso.ejs',{rta:rta});
+  res.render('index.ejs',{rta:rta});
 });
 });
 

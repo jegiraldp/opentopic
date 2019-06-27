@@ -26,6 +26,9 @@ background-color: white;
   color:red;
   font-size:24px;
   font-weight: bold;
+  background-color: #FDD7D7;
+  width: 80%;
+  // border: 1px solid red;
 }
 
 input#boton{
@@ -64,7 +67,8 @@ textarea{
 div#formu {
   width: 90%;
   border-radius: 5px;
-  //background-color: #f2f2f2;
-  background-color: #C9F0DD;
+  background-color: white;
+  //background-color: #C9F0DD;
   padding: 20px;
+  border: 1px solid #C9F0DD;
 }

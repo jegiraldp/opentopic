@@ -9,6 +9,12 @@
   <body>
     <div id="encabezado">OpenTopic</div>
     <div id="opciones"><% include partials/opciones.ejs %></div>
+    <div id="divrespuesta">
+      <% if (rta) { %>
+        <p> ¡¡ <%= rta %> !!</p>
+      <% } %>
+    </div>
+    <div id="diverror"></div>
     <div id="centro">
               <p class="menu">Listado de Cursos -  <i>OpenTopic</i></p>
               <p class="letra">A</p>
