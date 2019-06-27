@@ -1,0 +1,94 @@
+body{
+  font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
+}
+
+div#encabezado{
+  background-color: #C9F0DD;
+  width:99%;
+  height: 45px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: -1px;
+  border: 1px solid #f8f8f8;
+
+}
+div#opciones{
+  background-color: white;
+  width:99%;
+  height: 45px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: left;
+  font-size: 2rem;
+  letter-spacing: -1px;
+  border: 1px solid #c8e1ff;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+div#centro{
+  background-color: white;
+  //background-color: #c8e1ff;
+  height: auto;
+  width:100%;
+  float:left;
+  padding-left: 5px;
+
+}
+li.curso:hover{
+  background-color: #f9edbe;
+  font-weight: bold;
+  font-style: italic;
+  list-style-type: square;
+}
+li.curso{
+    font-size: 16px;
+    letter-spacing: -1px;
+    cursor:pointer
+}
+
+p.letra{
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    line-height : 0px;
+}
+div#pie{
+  background-color: white;
+  width:100%;
+  border: 1px solid #c8e1ff;
+  height: 50px;
+  float:left;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 7px;
+  padding-right: 10px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+
+img.logos2{
+  width: 35px;
+  height: 35px;
+}
+img.logos2:hover{
+  width: 37px;
+  height: 37px;
+}
+
+img.opciones{
+  width: 24px;
+  height: 24px;
+}
+
+p.menu{
+  //background-color: #fff0e0;
+  font-weight: bold;
+  font-size: 20px;
+
+
+}

@@ -1,0 +1,70 @@
+body{
+  font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
+}
+table#tablaR{
+  border: 0px;
+}
+a{
+  font-size:20px;
+}
+
+a:hover{
+  font-size:20px;
+  font-style: italic;
+}
+
+body{
+background-color: white;
+}
+
+#divrespuesta{
+  font-size:24px;
+  color:darkblue;
+}
+
+#diverror{
+  color:red;
+  font-size:24px;
+  font-weight: bold;
+}
+
+input#boton{
+ background-color: #f9edbe;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: 1px solid;
+ border-radius: 4px;
+ cursor: pointer;
+ font-size:18px;
+ width: 100%;
+}
+
+label{
+  font-size:20px;
+}
+
+input#boton:hover{
+   font-weight: bold;
+}
+
+input[type=text]{
+  width: 400px;
+  padding: 8px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+   font-size:16px;
+}
+textarea{
+  font-size:16px;
+}
+
+div#formu {
+  width: 90%;
+  border-radius: 5px;
+  //background-color: #f2f2f2;
+  background-color: #C9F0DD;
+  padding: 20px;
+}

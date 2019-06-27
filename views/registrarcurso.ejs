@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/css" href="css/registro.css" />
+  </head>
+  <body>
+    <center>
+      <div id="formu">
+    <form id="f1" action="/registrarcurso" method="post">
+      <table border="0" id="tablaR">
+
+      <tr>
+        <td><label for="txtNombreCurso">Nombre del Curso</label></td>
+        <td><input type="text" id="txtNombreCurso" name="txtNombreCurso" value=""
+          placeholder="Nombre del curso"/></td>
+      </tr>
+      <tr>
+        <td><label for="txtNombreCreador">Creador del Curso</label></td>
+        <td><input type="text" id="txtNombreCreador" name="txtNombreCreador" value=""
+          placeholder="Nombre del creador del curso"/></td>
+      </tr>
+
+      <tr>
+        <td><label for="txtCorreoCreador">Correo electrónico</label></td>
+        <td><input type="text" id="txtCorreoCreador" name="txtCorreoCreador" value=""
+          placeholder="Correo electrónico del creador del curso"/></td>
+      </tr>
+      <tr>
+        <td><label for="txtDescripcion">Descripción</label></td>
+        <td><textarea rows="8" cols="55" id="txtDescripcion" name="txtDescripcion" value=""
+          placeholder="Descripción del curso"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="button" id="boton" name="" value="Registrar Curso"></td>
+      </tr>
+      </table>
+    </form>
+  </div>
+
+    <div id="divrespuesta">
+      <% if (rta) { %>
+        <p> ¡¡ <%= rta %> !!</p>
+      <% } %>
+    </div>
+    <div id="diverror"></div>
+    <script src="js/registrarcurso.js"></script>
+
+    </center>
+
+  </body>
+</html>
