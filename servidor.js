@@ -37,10 +37,10 @@ app.post('/registrarcurso',(req,res)=> {
   const promesaReg=reg.registro(nc,ncc,cc,d,letra,fecha);
   promesaReg.then(function(rta){
   rta="Curso: " + nc + " - Registrado Correctamente ";
-  res.render('index.ejs',{rta:rta});
+  res.render('registrarcurso.ejs',{rta:rta});
 }).catch(function(rta){
   rta="-- ATENCIÓN --: "+nc + " - YA ESTÁ REGISTRADO .. ";
-  res.render('index.ejs',{rta:rta});
+  res.render('registrarcurso.ejs',{rta:rta});
 });
 });
 

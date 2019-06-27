@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+  $("div#centro").load("./util/listadoInicio.html");
+
 $("img.opciones").click(function(){
   $("div#centro").html("");
  var t=$(this).attr('name');
@@ -9,5 +11,5 @@ $("img.opciones").click(function(){
  $("div#centro").load(t);
   $("div#pie").html("");
 }
- });//click
- });//ready
+});//click
+});//ready
