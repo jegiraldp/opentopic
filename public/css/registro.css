@@ -48,7 +48,8 @@ label{
 }
 
 input#boton:hover{
-   font-weight: bold;
+   //font-weight: bold;
+   background-color: #C9F0DD;
 }
 
 input[type=text]{
@@ -56,10 +57,13 @@ input[type=text]{
   padding: 8px 20px;
   margin: 5px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  
   border-radius: 4px;
   box-sizing: border-box;
    font-size:16px;
+}
+input[type=text]:focus{
+  border: 1px solid #C9F0DD;
 }
 textarea{
   font-size:16px;

@@ -5,12 +5,12 @@ $(document).ready(function(){
    var ncc=$("input#txtNombreCreador").val();
    var cc=$("input#txtCorreoCreador").val();
    var de=$("input#txtDescripcion").val();
-   var data  = {
+   let data  = {
      nombre: nc,
      creador: ncc,
      correo:cc,
      descripcion:de
-     };
+   };
 
    if(nc=="" || ncc=="" || cc=="" || de==""){
    $("#divrespuesta").html("");
@@ -19,12 +19,10 @@ $(document).ready(function(){
    }//if
    else{
      $("#diverror").html("");
-    // $("#divrespuesta").html("A insertar");
     document.getElementById("f1").submit();
-    /*  $.post( "registrarcurso", function( data ) {
-        alert( "Data Loaded: " + data );
-      });//post*/
-
+   
    }//else
+
  });//click
+
 });//ready

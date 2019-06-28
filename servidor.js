@@ -13,14 +13,19 @@ app.use(express.static('public'));
 app.get('/',(req,res)=> {
   const rta=0;
   res.render('index.ejs',{rta:rta});
+  //res.write('hola parcero');
+  //res.end();
 });
 
 app.get('/curso',(req,res)=> {
   res.render('curso.ejs');
 });
 
-app.get('/listarcursos',(req,res)=> {
-  //res.render('curso.ejs');
+app.get('/centro',(req,res)=> {
+  //res.write('hola parcero');
+  //res.end();
+  const rta=09;
+  res.render('listadoinicio.ejs',{rta:rta});
 });
 
 app.get('/registrarcurso',(req,res)=> {
@@ -29,7 +34,6 @@ app.get('/registrarcurso',(req,res)=> {
 });
 
 app.post('/registrarcurso',(req,res)=> {
-
   let nc = req.body.txtNombreCurso;
   let ncc = req.body.txtNombreCreador;
   let cc = req.body.txtCorreoCreador;
@@ -42,6 +46,7 @@ app.post('/registrarcurso',(req,res)=> {
   promesaReg.then(function(rta){
   rta="Curso: " + nc + " - Registrado Correctamente ";
   res.render('registrarcurso_salida.ejs',{rta:rta});
+
 }).catch(function(rta){
   rta="-- ATENCIÓN --: "+nc + " - YA ESTÁ REGISTRADO .. ";
   res.render('registrarcurso_salida.ejs',{rta:rta});

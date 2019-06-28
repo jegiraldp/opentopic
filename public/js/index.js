@@ -1,6 +1,12 @@
 
 $(document).ready(function(){
-  $("div#centro").load("./util/listadoInicio.html");
+
+ // $("div#centro").load("./util/listadoInicio.html");
+ //post
+ $.get( "/centro", function( data ) {
+   $("div#centro").html(data);
+})
+ //post
 
 $("img.opciones").click(function(){
   $("div#centro").html("");
