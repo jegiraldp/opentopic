@@ -1,11 +1,16 @@
 $(document).ready(function(){
 
+  /*$("form#f1").on('submit',function (e) {
+    e.preventDefault();
+  });*/
+
  $("#boton").click(function() {
    var nc=$("input#txtNombreCurso").val();
    var ncc=$("input#txtNombreCreador").val();
    var cc=$("input#txtCorreoCreador").val();
-   var de=$("input#txtDescripcion").val();
-   let data  = {
+   var de=$("textarea#txtDescripcion").val();
+
+   const datos  = {
      nombre: nc,
      creador: ncc,
      correo:cc,
@@ -19,10 +24,20 @@ $(document).ready(function(){
    }//if
    else{
      $("#diverror").html("");
-    document.getElementById("f1").submit();
-   
+    // $("#divrespuesta").html("a registrar");
+    //document.getElementById("f1").submit();
+    $.post( "/registrarcurso", datos)
+    .done(function( data ) {
+      $("#divrespuesta").html(data );
+    });
+
    }//else
 
+
+   $("input#txtNombreCurso").val("");
+   $("input#txtNombreCreador").val("");
+   $("input#txtCorreoCreador").val("");
+   $("textarea#txtDescripcion").val("");
  });//click
 
 });//ready

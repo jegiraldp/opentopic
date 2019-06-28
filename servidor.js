@@ -7,8 +7,11 @@ const listar = require('./backend/hola.js');
 app.set('views',__dirname+'/views')
 app.set('public',__dirname+'/public')
 app.set('view engine','ejs');
-app.use(bodyParser.urlencoded({extended:false}));
+//app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.urlencoded({extended:false}));
 app.use(express.static('public'));
+app.use(express.json());
+
 
 app.get('/',(req,res)=> {
   const rta=0;
@@ -34,22 +37,24 @@ app.get('/registrarcurso',(req,res)=> {
 });
 
 app.post('/registrarcurso',(req,res)=> {
-  let nc = req.body.txtNombreCurso;
-  let ncc = req.body.txtNombreCreador;
-  let cc = req.body.txtCorreoCreador;
-  let d = req.body.txtDescripcion;
-  let letra = nc.substring(0,1);
+
+  const {nombre} = req.body;
+  const {creador} = req.body;
+  const {correo} = req.body;
+  const {descripcion} = req.body
+
+  let letra = nombre.substring(0,1);
   var dat = new Date();
   let fecha = dat.getDate()+"-"+dat.getMonth()+1+"-"+dat.getFullYear();
 
-  const promesaReg=reg.registro(nc,ncc,cc,d,letra,fecha);
+  const promesaReg=reg.registro(nombre,creador,correo,descripcion,letra,fecha);
   promesaReg.then(function(rta){
-  rta="Curso: " + nc + " - Registrado Correctamente ";
-  res.render('registrarcurso_salida.ejs',{rta:rta});
+  rta="Curso: " + nombre + " - Registrado Correctamente ";
+  res.render('registrarcurso.ejs',{rta:rta});
 
 }).catch(function(rta){
-  rta="-- ATENCIÓN --: "+nc + " - YA ESTÁ REGISTRADO .. ";
-  res.render('registrarcurso_salida.ejs',{rta:rta});
+  rta="-- ATENCIÓN --: "+nombre + " - YA ESTÁ REGISTRADO .. ";
+  res.render('registrarcurso.ejs',{rta:rta});
 });
 });
 
