@@ -5,7 +5,7 @@ $(document).ready(function(){
   });*/
 
  $("#boton").click(function() {
-   var nc=$("input#txtNombreCurso").val();
+   var nc=$("input#txtNombreCurso").val().toLowerCase();
    var ncc=$("input#txtNombreCreador").val();
    var cc=$("input#txtCorreoCreador").val();
    var de=$("textarea#txtDescripcion").val();
@@ -24,11 +24,11 @@ $(document).ready(function(){
    }//if
    else{
      $("#diverror").html("");
-    // $("#divrespuesta").html("a registrar");
-    //document.getElementById("f1").submit();
+
+ //document.getElementById("f1").submit();
     $.post( "/registrarcurso", datos)
     .done(function( data ) {
-      $("#divrespuesta").html(data );
+      $("#divrespuesta").html(data);
     });
 
    }//else

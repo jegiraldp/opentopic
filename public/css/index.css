@@ -90,6 +90,12 @@ p.menu{
   //font-weight: bold;
   font-size: 20px;
   color:red
+}
 
+hr#listado{
+   border: 1px dotted #C9F0DD;
+}
 
+table#tablaInicio{
+  width: auto;
 }

@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const reg = require('./backend/registrarCursoFinal.js');
 const listar = require('./backend/hola.js');
+const lis = require('./backend/listarInicio.js');
 //settings
 app.set('views',__dirname+'/views')
 app.set('public',__dirname+'/public')
@@ -14,7 +15,7 @@ app.use(express.json());
 
 
 app.get('/',(req,res)=> {
-  const rta=0;
+  const rta=99;
   res.render('index.ejs',{rta:rta});
   //res.write('hola parcero');
   //res.end();
@@ -27,8 +28,11 @@ app.get('/curso',(req,res)=> {
 app.get('/centro',(req,res)=> {
   //res.write('hola parcero');
   //res.end();
-  const rta=09;
-  res.render('listadoinicio.ejs',{rta:rta});
+  const promesa=lis.verinicio();
+    promesa.then(function(rta){
+      //console.table(rta)
+      res.render('listadoinicio.ejs',{rta:rta});
+    });
 });
 
 app.get('/registrarcurso',(req,res)=> {
@@ -45,16 +49,20 @@ app.post('/registrarcurso',(req,res)=> {
 
   let letra = nombre.substring(0,1);
   var dat = new Date();
-  let fecha = dat.getDate()+"-"+dat.getMonth()+1+"-"+dat.getFullYear();
+  var mes =parseInt(dat.getMonth());
+  mes+=1;
+  let fecha = dat.getDate()+"-"+mes+"-"+dat.getFullYear();
 
   const promesaReg=reg.registro(nombre,creador,correo,descripcion,letra,fecha);
   promesaReg.then(function(rta){
   rta="Curso: " + nombre + " - Registrado Correctamente ";
-  res.render('registrarcurso.ejs',{rta:rta});
+  //res.render('registrarcurso.ejs',{rta:rta});
+  res.end(rta);
 
 }).catch(function(rta){
   rta="-- ATENCIÓN --: "+nombre + " - YA ESTÁ REGISTRADO .. ";
-  res.render('registrarcurso.ejs',{rta:rta});
+  //res.render('registrarcurso.ejs',{rta:rta});
+  res.end(rta);
 });
 });
 

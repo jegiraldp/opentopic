@@ -20,6 +20,7 @@ background-color: white;
 #divrespuesta{
   font-size:24px;
   color:darkblue;
+  text-align: center;
 }
 
 #diverror{
@@ -57,7 +58,7 @@ input[type=text]{
   padding: 8px 20px;
   margin: 5px 0;
   display: inline-block;
-  
+
   border-radius: 4px;
   box-sizing: border-box;
    font-size:16px;

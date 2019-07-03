@@ -10,7 +10,7 @@
     <div id="encabezado">OpenTopic</div>
     <div id="opciones"><% include partials/opciones.ejs %></div>
     <div id="divrespuesta">
-      <% if (rta) { %>
+      <% if (rta!=99) { %>
         <p> ¡¡ <%= rta %> !!</p>
       <% } %>
     </div>

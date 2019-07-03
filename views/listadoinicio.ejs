@@ -1,42 +1,32 @@
-<p class="menu">Listado de Cursos -  <i>OpenTopic</i></p>
-<p class="letra">A</p>
-    <ul>
-      <li class="curso">Curso 1</li>
-      <li class="curso">Curso 2</li>
-      <li class="curso">Curso 3</li>
-    </ul>
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
 
-    <p class="letra">B</p>
-        <ul>
-          <li class="curso">Curso 1</li>
-          <li class="curso">Curso 2</li>
-          <li class="curso">Curso 3</li>
-        </ul>
 
-    <p class="letra">C</p>
-            <ul>
-              <li class="curso">Curso 1</li>
-              <li class="curso">Curso 2</li>
-              <li class="curso">Curso 3</li>
-            </ul>
+    <div id="escondido">
+          <% if (rta.length!=0) { %>
+            <p class="menu">Cursos - <i>OpenTopic</i></p>
+            <table id="tablaInicio">
 
-      <p class="letra">D</p>
-                <ul>
-                  <li class="curso">Curso 1</li>
-                  <li class="curso">Curso 2</li>
-                  <li class="curso">Curso 3</li>
-                </ul>
+            <% for(var i=0; i<rta.length; i++) {%>
+              <tr>
+                <td>
+               <b> <%= rta[i].nombre %> </b>: <%= rta[i].descripcion %> --
+                 <b>Creador :</b> <%= rta[i].creador %> - <%= rta[i].correo %>
+                    - <b>Fecha:</b> <%= rta[i].fecha %>
+                     <hr id="listado"/>
+                    </td>
+                    </tr>
 
-        <p class="letra">E</p>
-                    <ul>
-                      <li class="curso">Curso 1</li>
-                      <li class="curso">Curso 2</li>
-                      <li class="curso">Curso 3</li>
-                    </ul>
-
-          <p class="letra">F</p>
-                        <ul>
-                          <li class="curso">Curso 1</li>
-                          <li class="curso">Curso 2</li>
-                          <li class="curso">Curso 3</li>
-                        </ul>
+            <% } %>
+            </table>
+          <% } else{ %>
+            <i>-- Empty -- </i>
+            <% } %>
+        </div> <br/>
+  </body>
+</html>
