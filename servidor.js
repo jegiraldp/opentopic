@@ -30,7 +30,12 @@ app.get('/centro',(req,res)=> {
   //res.end();
   const promesa=lis.verinicio();
     promesa.then(function(rta){
-      //console.table(rta)
+
+      for (var i = 0; i < rta.length; i++) {
+        rta[i].nombre=rta[i].nombre.substring(1);
+        rta[i].nombre=rta[i].letra.toUpperCase()+rta[i].nombre;
+      }
+
       res.render('listadoinicio.ejs',{rta:rta});
     });
 });

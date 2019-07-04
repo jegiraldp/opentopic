@@ -7,9 +7,9 @@ div#encabezado{
   width:99%;
   height: 45px;
   padding-top: 2px;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: -1px;
   border: 1px solid #f8f8f8;
 
@@ -81,8 +81,8 @@ img.logos2:hover{
 }
 
 img.opciones{
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
 
 p.menu{
@@ -92,10 +92,14 @@ p.menu{
   color:red
 }
 
-hr#listado{
+hr.listado{
    border: 1px dotted #C9F0DD;
 }
 
 table#tablaInicio{
   width: auto;
+}
+
+tr.curso:hover{
+  background-color: #f9edbe;
 }

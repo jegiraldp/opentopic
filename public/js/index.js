@@ -1,8 +1,6 @@
 
 $(document).ready(function(){
 
- // $("div#centro").load("./util/listadoInicio.html");
- //post
  $.get( "/centro", function( data ) {
    $("div#centro").html(data);
 })
@@ -18,4 +16,11 @@ $("img.opciones").click(function(){
   $("div#pie").html("");
 }
 });//click
+
+
+$("a#nombre").click(function(){
+  //var t=$(this).attr('name');
+  alert("hola");
+});//click
+
 });//ready

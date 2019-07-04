@@ -9,16 +9,18 @@
 
     <div id="escondido">
           <% if (rta.length!=0) { %>
-            <p class="menu">Cursos - <i>OpenTopic</i></p>
+           <!-- <p class="menu">Cursos - <i>OpenTopic</i></p>-->
             <table id="tablaInicio">
 
-            <% for(var i=0; i<rta.length; i++) {%>
-              <tr>
+            <% for(var i=0; i<rta.length; i++) { %>
+              <tr class="curso">
                 <td>
-               <b> <%= rta[i].nombre %> </b>: <%= rta[i].descripcion %> --
-                 <b>Creador :</b> <%= rta[i].creador %> - <%= rta[i].correo %>
+               <b><a href="#" id="nombre" name="<%= rta[i].nombre %>">
+                 <%= rta[i].nombre %></a></b>
+               <br/> <%= rta[i].descripcion %> --
+                 <br/><b>Creador :</b> <%= rta[i].creador %> - <%= rta[i].correo %>
                     - <b>Fecha:</b> <%= rta[i].fecha %>
-                     <hr id="listado"/>
+                     <hr class="listado"/>
                     </td>
                     </tr>
 
