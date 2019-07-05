@@ -17,10 +17,4 @@ $("img.opciones").click(function(){
 }
 });//click
 
-
-$("a#nombre").click(function(){
-  //var t=$(this).attr('name');
-  alert("hola");
-});//click
-
 });//ready

@@ -15,10 +15,14 @@
             <% for(var i=0; i<rta.length; i++) { %>
               <tr class="curso">
                 <td>
-               <b><a href="#" id="nombre" name="<%= rta[i].nombre %>">
-                 <%= rta[i].nombre %></a></b>
+                    <a target="_blank" id="nombre" name="<%= rta[i].nombre %>">
+                  <form id="f1">
+                  <input type="text" id="txtNombreCurso" name="txtNombreCurso"
+                  value="<%= rta[i].nombre %>"/>
+                </form>
+                </a></b>
                <br/> <%= rta[i].descripcion %> --
-                 <br/><b>Creador :</b> <%= rta[i].creador %> - <%= rta[i].correo %>
+                 <br/><b>Autor:</b> <%= rta[i].creador %> - <%= rta[i].correo %>
                     - <b>Fecha:</b> <%= rta[i].fecha %>
                      <hr class="listado"/>
                     </td>
@@ -30,5 +34,7 @@
             <i>-- Empty -- </i>
             <% } %>
         </div> <br/>
+        <script src="js/indexListado.js"></script>
+
   </body>
 </html>

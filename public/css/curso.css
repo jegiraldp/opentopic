@@ -2,22 +2,7 @@ body{
   font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
 }
 
-div{
 
-  background-color: white
-
-}
-div#encabezado{
-  background-color: #C9F0DD;
-  width:95%;
-  height: 45px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-align: center;
-  font-size: 2rem;
-  letter-spacing: -1px;
-  border: 1px solid #f8f8f8;
-}
 div#izquierdo{
   background-color: white;
   //background-color: #c8e1ff;
@@ -43,11 +28,11 @@ li.tema{
 
 }
 
-div#centro{
+div#centrocurso{
   background-color: white;
   //background-color: #c8e1ff;
   height: 450px;
-  width:70%;
+  width:75%;
   //display: inline-block;
   float:left;
   padding-top: 7px;
@@ -56,19 +41,7 @@ div#centro{
   text-align: justify;
 }
 
-div#pie{
-  background-color: white;
-  width:95%;
-  border: 1px solid #c8e1ff;
-  height: 50px;
-  float:left;
-  text-align: center;
-  font-size: 18px;
-  padding-top: 7px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-}
+
 
 img.logos2{
   width: 35px;
@@ -86,4 +59,9 @@ p.menu{
   background-color: #f9edbe;
   font-weight: bold;
   font-size: 16px;
+}
+
+p.nombremini{
+  font-size: 12px;
+  font-weight: bold;
 }

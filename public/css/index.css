@@ -103,3 +103,9 @@ table#tablaInicio{
 tr.curso:hover{
   background-color: #f9edbe;
 }
+
+a#nombre{
+  text-decoration: underline;
+  cursor:pointer;
+  color:blue;
+}

@@ -21,8 +21,9 @@ app.get('/',(req,res)=> {
   //res.end();
 });
 
-app.get('/curso',(req,res)=> {
-  res.render('curso.ejs');
+app.post('/curso',(req,res)=> {
+  const {nombre} = req.body;
+  res.render('curso.ejs',{nombre:nombre});
 });
 
 app.get('/centro',(req,res)=> {
