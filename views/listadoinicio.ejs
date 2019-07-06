@@ -9,25 +9,28 @@
 
     <div id="escondido">
           <% if (rta.length!=0) { %>
-           <!-- <p class="menu">Cursos - <i>OpenTopic</i></p>-->
-            <table id="tablaInicio">
+              <table id="tablaInicio">
 
             <% for(var i=0; i<rta.length; i++) { %>
+               <form id="f1">
               <tr class="curso">
                 <td>
-                    <a target="_blank" id="nombre" name="<%= rta[i].nombre %>">
-                  <form id="f1">
-                  <input type="text" id="txtNombreCurso" name="txtNombreCurso"
-                  value="<%= rta[i].nombre %>"/>
-                </form>
-                </a></b>
-               <br/> <%= rta[i].descripcion %> --
+                   <a target="_blank" id="nombre" name="<%= rta[i].nombre %>">
+                     <input type="text" id="txtNombreCursoListado" name="txtNombreCursoListado"
+                     value="<%= rta[i].nombre %>"/></a>
+                 </td>
+               </tr>
+               <tr  class="datoscurso">
+               <td>
+
+               <%= rta[i].descripcion %> --
                  <br/><b>Autor:</b> <%= rta[i].creador %> - <%= rta[i].correo %>
                     - <b>Fecha:</b> <%= rta[i].fecha %>
-                     <hr class="listado"/>
+                    <hr class="listado"/>
                     </td>
-                    </tr>
 
+                  </tr>
+                      </form>
             <% } %>
             </table>
           <% } else{ %>

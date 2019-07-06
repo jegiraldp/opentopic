@@ -11,7 +11,7 @@ div#encabezado{
   text-align: center;
   font-size: 1.8rem;
   letter-spacing: -1px;
-  border: 1px solid #f8f8f8;
+  border: 1px solid black;
 
 }
 div#opciones{
@@ -37,17 +37,6 @@ div#centro{
   float:left;
   padding-left: 5px;
 
-}
-li.curso:hover{
-  background-color: #f9edbe;
-  font-weight: bold;
-  font-style: italic;
-  list-style-type: square;
-}
-li.curso{
-    font-size: 16px;
-    letter-spacing: -1px;
-    cursor:pointer
 }
 
 p.letra{
@@ -85,27 +74,32 @@ img.opciones{
   height: 18px;
 }
 
-p.menu{
-  //background-color: #fff0e0;
-  //font-weight: bold;
-  font-size: 20px;
-  color:red
-}
+
 
 hr.listado{
-   border: 1px dotted #C9F0DD;
+   border: 1px solid #C9F0DD;
 }
 
 table#tablaInicio{
   width: auto;
 }
 
-tr.curso:hover{
-  background-color: #f9edbe;
+tr.datoscurso:hover{
+  background-color: #C9F0DD;
+
 }
 
-a#nombre{
+tr.datoscurso{
+  font-size: 14px;
+}
+
+
+input#txtNombreCursoListado{
+  border: 0px;
   text-decoration: underline;
   cursor:pointer;
   color:blue;
+
+  font-size: 16px;
+  cursor:pointer
 }
