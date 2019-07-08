@@ -39,35 +39,7 @@ div#centro{
 
 }
 
-p.letra{
-    font-size: 18px;
-    letter-spacing: -1px;
-    font-weight: bold;
-    line-height : 0px;
-}
-div#pie{
-  background-color: white;
-  width:100%;
-  border: 0px solid #c8e1ff;
-  height: 50px;
-  float:left;
-  text-align: center;
-  font-size: 18px;
-  padding-top: 7px;
-  padding-right: 10px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-}
 
-img.logos2{
-  width: 35px;
-  height: 35px;
-}
-img.logos2:hover{
-  width: 37px;
-  height: 37px;
-}
 
 img.opciones{
   width: 18px;
@@ -84,15 +56,17 @@ table#tablaInicio{
   width: auto;
 }
 
-tr.datoscurso:hover{
-  background-color: #C9F0DD;
 
+tr.curso{
+  font-size: 12px;
 }
 
-tr.datoscurso{
-  font-size: 14px;
-}
+tr.curso:hover{
+  font-style: italic;
+  font-size: 13px;
 
+  color:blue;
+}
 
 input#txtNombreCursoListado{
   border: 0px;
@@ -100,6 +74,6 @@ input#txtNombreCursoListado{
   cursor:pointer;
   color:blue;
 
-  font-size: 16px;
+  font-size: 13px;
   cursor:pointer
 }

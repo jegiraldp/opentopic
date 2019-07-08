@@ -15,17 +15,30 @@ div#izquierdo{
 }
 li.tema:hover{
   background-color: #f9edbe;
-  font-weight: bold;
-  font-style: italic;
+  font-weight: normal;
   list-style-type: square;
+  color:black;
 
 }
 li.tema{
-  font-size: 16px;
+    font-size: 14px;
     letter-spacing: -1px;
     cursor:pointer;
     padding-left: 0px;
 
+}
+
+li.unidad{
+    font-size: 14px;
+    letter-spacing: -1px;
+    cursor:pointer;
+    padding-left: 0px;
+
+}
+
+li.unidad:hover{
+  //font-weight: bold;
+  color:blue;
 }
 
 div#centrocurso{
@@ -52,16 +65,25 @@ img.logos2:hover{
   height: 37px;
 }
 
-p{
-  background-color: white;
+
+
+div#contenidos{
+  background-color: #C9F0DD;
+  text-align: left;
+  width:20%;
+  float:left;
+
+  background-color: #C9F0DD;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+div#settingIcon{
+  text-align: left;
 }
 p.menu{
   background-color: #C9F0DD;
+  font-size: 13px;
   font-weight: bold;
-  font-size: 16px;
-}
 
-p.nombremini{
-  font-size: 12px;
-  font-weight: bold;
 }
