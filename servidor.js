@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const reg = require('./backend/registrarCursoFinal.js');
 const listar = require('./backend/hola.js');
 const lis = require('./backend/listarInicio.js');
+const lisDetalle = require('./backend/listarCursoDetalle.js');
 //settings
 app.set('views',__dirname+'/views')
 app.set('public',__dirname+'/public')
@@ -23,7 +24,11 @@ app.get('/',(req,res)=> {
 
 app.post('/curso',(req,res)=> {
   const {nombre} = req.body;
-  res.render('curso.ejs',{nombre:nombre});
+  const promesaD=lisDetalle.verDetalle(nombre);
+  promesaD.then(function(rta){
+    //console.log(rta[0].descripcion);
+    res.render('curso.ejs',{nombre:nombre,rta:rta});
+});//then
 });
 
 app.get('/centro',(req,res)=> {

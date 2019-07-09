@@ -43,15 +43,13 @@ li.unidad:hover{
 
 div#centrocurso{
   background-color: white;
-  //background-color: #c8e1ff;
   height: 450px;
   width:75%;
-  //display: inline-block;
   float:left;
-  padding-top: 7px;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
   text-align: justify;
+  color:black;
 }
 
 
@@ -80,6 +78,7 @@ div#contenidos{
 
 div#settingIcon{
   text-align: left;
+
 }
 p.menu{
   background-color: #C9F0DD;
