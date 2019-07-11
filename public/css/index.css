@@ -3,7 +3,8 @@ body{
 }
 
 div#encabezado{
-  background-color: #C9F0DD;
+ // background-color: #C9F0DD;
+  background-color: #f5f5f5;
   width:99%;
   height: 45px;
   padding-top: 2px;
@@ -11,7 +12,9 @@ div#encabezado{
   text-align: center;
   font-size: 1.8rem;
   letter-spacing: -1px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color:#3B2F63;
 
 }
 div#opciones{
@@ -32,33 +35,37 @@ div#opciones{
 div#centro{
   background-color: white;
   //background-color: #c8e1ff;
-  height: auto;
+
   width:100%;
   float:left;
-  padding-left: 5px;
+  //padding-left: 5px;
+  padding: 8px 20px;
 
 }
 
 
 
 img.opciones{
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
 }
 
 
 
 hr.listado{
-   border: 1px solid #C9F0DD;
+   //border: 1px solid #C9F0DD;
+   border: 1px solid #ccc;
 }
 
 table#tablaInicio{
-  width: auto;
+  width: 96%;
 }
 
 
 tr.curso{
   font-size: 12px;
+  //background-color: #f2f3f6;
 }
 
 tr.curso:hover{
@@ -73,7 +80,7 @@ input#txtNombreCursoListado{
   text-decoration: underline;
   cursor:pointer;
   color:blue;
-
+//background-color: #f2f3f6;
   font-size: 13px;
   cursor:pointer
 }
