@@ -10,7 +10,7 @@ div#izquierdo{
   width:20%;
   //display: inline-block;
   float:left;
-
+  border-right: 1px solid #ccc;
 
 }
 li.tema:hover{

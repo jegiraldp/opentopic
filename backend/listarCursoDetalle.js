@@ -18,7 +18,7 @@ con.connect(function(err) {
 /////
 con.query(elquery, function (error, results,fields) {
   if (error) throw error;
-    console.table(results);
+    //console.table(results);
     con.end();
     console.log('¡¡ No Conectado !! -- Listar Curso Detalle');
     return resolve(results);

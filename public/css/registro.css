@@ -45,7 +45,7 @@ input#boton{
 }
 
 label{
-  font-size:20px;
+  font-size:16px;
 }
 
 input#boton:hover{
@@ -61,20 +61,26 @@ input[type=text]{
 
   border-radius: 4px;
   box-sizing: border-box;
-   font-size:16px;
+   font-size:14px;
 }
 input[type=text]:focus{
-  border: 1px solid #C9F0DD;
+  border: 1px solid black;
+  background-color: white;
+  box-shadow: 0 0 0 4px #C9F0DD;
 }
 textarea{
-  font-size:16px;
+  font-size:14px;
+}
+
+textarea:focus{
+  font-size:14px;
+  box-shadow: 0 0 0 4px #C9F0DD;
 }
 
 div#formu {
   width: 90%;
   border-radius: 5px;
   background-color: white;
-  //background-color: #C9F0DD;
   padding: 20px;
-  border: 1px solid #C9F0DD;
+  //border: 1px solid #C9F0DD;
 }
