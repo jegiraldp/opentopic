@@ -9,7 +9,7 @@ password:'jorge123',
 database:'journal'
 };
 var elquery='SELECT * from opentopic_curso where nombre =\''+nombreC+'\'';
-console.log(elquery);
+//console.log(elquery);
 var con = mys.createConnection(dataCon);
 con.connect(function(err) {
   if (err) throw err;
