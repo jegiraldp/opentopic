@@ -1,25 +1,22 @@
 
 $(document).ready(function(){
 
+  $("a#nombre").click(function(){
+    var nombre=$(this).attr('name');
 
-$("a#nombre").click(function(){
-  var nombre=$(this).attr('name');
-  $("div#encabezado").html(nombre);
-  const datos  = {
-    nombre: nombre,
-    ape: "llido"
+   $("div#encabezado").html(nombre);
 
-  }
-  $.post( "/curso",datos)
-  .done(function( data ) {
-   
-    $("div#centro").html(data);
-  });
+   const datos  = {
+      nombre: nombre,
+      ape: "llido"
 
+    }
 
+    $.post( "/curso",datos,'json')
+    .done(function(data) {
+      $("div#centro").html(data);
+    });
 
-
-});//click
-
+  });//click
 
 });//ready

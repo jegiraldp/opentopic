@@ -12,12 +12,11 @@
               <table id="tablaInicio">
 
             <% for(var i=0; i<rta.length; i++) { %>
-               <form id="f1">
+
               <tr class="curso">
                 <td>
                    <a target="_blank" id="nombre" name="<%= rta[i].nombre %>">
-                     <input readonly size="30" type="text" id="txtNombreCursoListado" name="txtNombreCursoListado"
-                     value="<%= rta[i].nombre %>"/></a>
+                     <%= rta[i].nombre %></a>
 
                  <b>Autor:</b> <%= rta[i].creador %> - <%= rta[i].correo %>
                     - <b>Fecha:</b> <%= rta[i].fecha %>
@@ -25,7 +24,7 @@
                     </td>
 
                   </tr>
-                      </form>
+                
             <% } %>
             </table>
           <% } else{ %>

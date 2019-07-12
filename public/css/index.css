@@ -59,12 +59,6 @@ hr.listado{
     height: 1px;
 }
 
-hr.listado:hover{
-  //  background-color: black;
-    border: 0 solid black;
-    height: 1px;
-}
-
 table#tablaInicio{
   width: 98%;
 }
@@ -83,12 +77,16 @@ tr.curso:hover{
   color:blue;
 }
 
-input#txtNombreCursoListado{
+/*input#txtNombreCursoListado{
   border: 0px;
   text-decoration: underline;
   cursor:pointer;
   color:blue;
 //background-color: #f2f3f6;
   font-size: 13px;
-  cursor:pointer
+
+}*/
+
+a{
+    cursor:pointer;
 }
