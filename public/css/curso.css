@@ -64,13 +64,13 @@ div#centrocurso{
 
 
 img#setting{
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
 }
 
 img#setting:hover{
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   cursor:pointer;
 }
 

@@ -76,7 +76,7 @@ tr.curso{
 tr.curso:hover{
   font-style: italic;
   font-size: 13px;
-  color:blue;
+  //color:blue;
   background-color: #f9edbe;
 }
 
@@ -85,6 +85,7 @@ a#nombre{
     cursor:pointer;
     text-decoration: none;
     color:blue;
+
 }
 
 a#nombre:hover{
