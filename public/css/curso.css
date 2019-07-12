@@ -15,9 +15,10 @@ div#izquierdo{
 }
 li.tema:hover{
   background-color: #f9edbe;
-  font-weight: normal;
+  font-weight: bold;
   list-style-type: square;
-  color:black;
+  //color:black;
+    font-size: 15px;
 
 }
 li.tema{
@@ -28,7 +29,7 @@ li.tema{
 
 }
 
-li.unidad{
+li.unidad, li.biblio{
     font-size: 14px;
     letter-spacing: -1px;
     cursor:pointer;
@@ -37,8 +38,16 @@ li.unidad{
 }
 
 li.unidad:hover{
-  //font-weight: bold;
   color:blue;
+
+}
+
+li.biblio:hover{
+  color:blue;
+  background-color: #f9edbe;
+  list-style-type: square;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 div#centrocurso{
@@ -54,25 +63,24 @@ div#centrocurso{
 
 
 
-img.logos2{
-  width: 35px;
-  height: 35px;
-}
-img.logos2:hover{
-  width: 37px;
-  height: 37px;
+img#setting{
+  width: 15px;
+  height: 15px;
 }
 
-
+img#setting:hover{
+  width: 16px;
+  height: 16px;
+  cursor:pointer;
+}
 
 div#contenidos{
-  background-color: #C9F0DD;
+  background-color: #c4c4c4;
   text-align: left;
   width:20%;
   float:left;
 
-  background-color: #C9F0DD;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -80,9 +88,8 @@ div#settingIcon{
   text-align: left;
 
 }
-p.menu{
-  background-color: #C9F0DD;
-  font-size: 13px;
+p#bibliografia{
+  background-color: #c4c4c4;
+  font-size: 14px;
   font-weight: bold;
-
 }

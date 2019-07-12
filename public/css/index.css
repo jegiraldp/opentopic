@@ -51,6 +51,11 @@ img.opciones{
   cursor: pointer;
 }
 
+img.opciones:hover{
+  width: 16px;
+  height: 16px;
+}
+
 
 
 hr.listado{
@@ -66,27 +71,22 @@ table#tablaInicio{
 
 tr.curso{
   font-size: 12px;
-  //background-color: #f2f3f6;
-
 }
 
 tr.curso:hover{
   font-style: italic;
   font-size: 13px;
-
   color:blue;
+  background-color: #f9edbe;
 }
 
-/*input#txtNombreCursoListado{
-  border: 0px;
-  text-decoration: underline;
-  cursor:pointer;
-  color:blue;
-//background-color: #f2f3f6;
-  font-size: 13px;
 
-}*/
-
-a{
+a#nombre{
     cursor:pointer;
+    text-decoration: none;
+    color:blue;
+}
+
+a#nombre:hover{
+    text-decoration: underline;
 }
