@@ -57,9 +57,10 @@ app.get('/login',(req,res)=> {
 });
 
 
-app.post('/login2',(req,res)=> {
-  const clave = req.body.txtCla
-  res.render('login2.ejs',{clave:clave});
+app.post('/login',(req,res)=> {
+  const {clave} = req.body;
+  console.log("La clave es "+clave);
+  res.render('loginFinal.ejs',{clave:clave});
 });
 
 app.post('/registrarcurso',(req,res)=> {

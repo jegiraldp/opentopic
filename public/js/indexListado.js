@@ -10,7 +10,7 @@ $(document).ready(function(){
       nombre: nombre,
       ape: "llido"
 
-    }
+    };
 
     $.post( "/curso",datos,'json')
     .done(function(data) {

@@ -1,5 +1,5 @@
 
-input:focus{
+input#txtCla:focus{
   background-color: #f9edbe;
 }
 
@@ -8,4 +8,13 @@ hr{
   border: 0 none;
   height: 1px;
   width:80%
+}
+
+div#loginrespuesta{
+  font-size:18px;
+  color:darkblue;
+}
+form{
+  font-size:18px;
+  color:darkblue;
 }
