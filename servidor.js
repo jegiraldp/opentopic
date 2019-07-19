@@ -51,6 +51,17 @@ app.get('/registrarcurso',(req,res)=> {
   res.render('registrarcurso.ejs',{rta:rta});
 });
 
+app.get('/login',(req,res)=> {
+  const clave=0;
+  res.render('login.ejs',{clave:clave});
+});
+
+
+app.post('/login2',(req,res)=> {
+  const clave = req.body.txtCla
+  res.render('login2.ejs',{clave:clave});
+});
+
 app.post('/registrarcurso',(req,res)=> {
 
   const {nombre} = req.body;

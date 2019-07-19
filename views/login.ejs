@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>-</title>
+     <link rel="stylesheet" type="text/css" href="css/login.css" />
+  </head>
+  <body><center>
+    <form action="/login2" method="post" name="f1">
+      Clave:<input type="password" name="txtCla" value="" placeholder="Digite Clave" />
+      <input type="button"  value="Ingresar" onclick="validar()" />
+    </form>
+<hr/>
+    <div id="loginrespuesta">
+      <% if (clave==99) { %>
+        <p> ¡¡ Su clave <%= clave %> le permite el ingreso !!</p>
+      <% } %>
+    </div>
+    </center>
+    <script src="js/login.js"></script>
+  </body>
+</html>

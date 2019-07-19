@@ -13,7 +13,7 @@ $("img.opciones").click(function(){
    location.reload();
  }else{
  $("div#centro").load(t);
-  $("div#pie").html("");
+
 }
 });//click
 

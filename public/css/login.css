@@ -1,0 +1,11 @@
+
+input:focus{
+  background-color: #f9edbe;
+}
+
+hr{
+  background-color: #ccc;
+  border: 0 none;
+  height: 1px;
+  width:80%
+}
