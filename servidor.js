@@ -59,8 +59,13 @@ app.get('/login',(req,res)=> {
 
 app.post('/login',(req,res)=> {
   const {clave} = req.body;
-  console.log("La clave es "+clave);
-  res.render('loginFinal.ejs',{clave:clave});
+  var rta="Jorge Giraldo";
+  if(clave=="99"){
+  res.render('adminCursoInicio.ejs',{rta:rta});
+  }else{
+    var rta="Usuario no registrado - comuniquese con su administrador !!"
+    res.render('loginFinal.ejs',{rta:rta});
+  }
 });
 
 app.post('/registrarcurso',(req,res)=> {

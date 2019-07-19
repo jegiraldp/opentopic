@@ -8,7 +8,7 @@ $(document).ready(function(){
 
     if(clave==""){
       $("div#loginrespuesta").show("slow");
-      $("div#loginrespuesta").html("Faltan Datos");
+      $("div#loginrespuesta").html("¡¡ Faltan Datos !!");
     }else{
       $("div#loginrespuesta").html("");
 
@@ -17,6 +17,7 @@ $(document).ready(function(){
        $.post( "/login",datos,'json')
        .done(function(data) {
          $("div#loginrespuesta").html(data);
+         $("div#centrocurso").html(data);
        });
 
         $("input#txtCla").val("");
