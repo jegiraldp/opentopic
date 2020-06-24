@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
- $.get( "/centro", function( data ) {
+ $.get( "/centro", (data)=> {
    $("div#centro").html(data);
 })
  //post

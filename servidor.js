@@ -26,6 +26,8 @@ app.post('/curso',(req,res)=> {
   const {nombre} = req.body;
   const promesaD=lisDetalle.verDetalle(nombre);
   promesaD.then(function(rta){
+    rta[0].nombre=rta[0].nombre.substring(1);
+    rta[0].nombre=rta[0].letra.toUpperCase()+rta[0].nombre;
     //console.log(rta[0].descripcion);
     res.render('curso.ejs',{nombre:nombre,rta:rta});
 });//then
@@ -59,7 +61,7 @@ app.get('/login',(req,res)=> {
 
 app.post('/login',(req,res)=> {
   const {clave} = req.body;
-  var rta="Jorge Giraldo";
+  var rta="jorge";
   if(clave=="99"){
   res.render('adminCursoInicio.ejs',{rta:rta});
   }else{

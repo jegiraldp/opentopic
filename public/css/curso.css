@@ -3,16 +3,35 @@ body{
 }
 
 
-div#izquierdo{
+div#contenidos{
+
   background-color: white;
-  //background-color: #c8e1ff;
   height: auto;
-  width:20%;
+  width:50%;
   //display: inline-block;
   float:left;
-  border-right: 1px solid #ccc;
+  //border-right: 1px solid #ccc;
 
 }
+
+div#titulo{
+  background-color: white;
+
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+div#informacion{
+  background-color: #fcf7e5;
+  padding-left: 5px;
+  padding-right: 10px;
+  text-align: justify;
+  color:black;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
 li.tema:hover{
   background-color: #fcf7e5;
   font-weight: bold;
@@ -50,16 +69,7 @@ li.biblio:hover{
   font-weight: bold;
 }
 
-div#centrocurso{
-  background-color: white;
-  height: 450px;
-  width:75%;
-  float:left;
-  padding-left: 20px;
-  padding-right: 10px;
-  text-align: justify;
-  color:black;
-}
+
 
 
 
@@ -74,15 +84,7 @@ img#setting:hover{
   cursor:pointer;
 }
 
-div#contenidos{
-  background-color: #c4c4c4;
-  text-align: left;
-  width:20%;
-  float:left;
 
-  font-size: 14px;
-  font-weight: bold;
-}
 
 div#loginFinal{
   color:red;
@@ -92,8 +94,8 @@ div#settingIcon{
   text-align: left;
 
 }
-p#bibliografia{
-  background-color: #c4c4c4;
+p#tituloContenidos{
+  //background-color: #c4c4c4;
   font-size: 14px;
   font-weight: bold;
 }

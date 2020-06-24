@@ -4,7 +4,7 @@ $(document).ready(function(){
   $("a#nombre").click(function(){
     var nombre=$(this).attr('name');
 
-   $("div#encabezado").html(nombre);
+   //$("div#encabezado").html(nombre);
 
    const datos  = {
       nombre: nombre,

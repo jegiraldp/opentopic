@@ -7,9 +7,18 @@
   </head>
   <body>
 
-          <div id="contenidos">Contenidos</div>
-          <div id="settingIcon"><img id="setting" src="img/setting.png"/></div>
-    <div id="izquierdo">
+
+          <div id="informacion">
+            <% if (rta) { %>
+              <b>Nombre : </b><%= rta[0].nombre %><br/>
+              <b>Descripción : </b><%= rta[0].descripcion %><br/>
+              <b>Creado por : </b><%= rta[0].creador %> -- <%= rta[0].correo %><br/>
+              <b>Fecha : </b><%= rta[0].fecha %><br/>
+            <% } %>
+           </div>
+        <!--  <div id="settingIcon"><img id="setting" src="img/setting.png"/></div>-->
+    <div id="contenidos">
+      <p id="tituloContenidos">Contenidos</p>
   <ul>
                 <li class="unidad">Fundamentos de la Inteligencia Artificial
                   <ul>
@@ -29,25 +38,11 @@
                    </ul>
 
                   </li>
-                 
+
 
               </ul>
 
-              <p id="bibliografia">Referencias Bibliográficas</p>
-              <ul>
-                <li class="biblio">Libros</li>
-                <li class="biblio">Artículos</li>
-                <li class="biblio">Tesis</li>
-                <li class="biblio">Otros</li>
-               </ul>
-             </div>
-    <div id="centrocurso">
-      <% if (rta) { %>
-        <b>Descripción : </b><%= rta[0].descripcion %><br/>
-        <b>Creado por : </b><%= rta[0].creador %> -- <%= rta[0].correo %><br/>
-        <b>Fecha : </b><%= rta[0].fecha %><br/>
-      <% } %>
-     </div>
+
 <script src="js/curso.js"></script>
   </body>
 </html>
