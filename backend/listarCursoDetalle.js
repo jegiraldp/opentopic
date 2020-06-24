@@ -4,7 +4,7 @@ module.exports.verDetalle=function(nombreC){
 return new Promise(function (resolve,reject){
 var dataCon={
 host:'localhost',
-user:'jorge',
+user:'jorge_ot',
 password:'jorge123',
 database:'journal'
 };
