@@ -6,22 +6,31 @@
   </head>
   <body>
 
-
+    <div id="informacion">
+      <% if (total) { %>
+        <i>Total de cursos a hoy : <%= total[0].total %></i><br/>
+      <% } %>
+     </div>
     <div id="escondido">
           <% if (rta.length!=0) { %>
+              <br/>
               <table id="tablaInicio">
-
+            <tr>
+              <th>Nombre de curso</th><th>Datos del curso</th>
+            </tr>
             <% for(var i=0; i<rta.length; i++) { %>
 
               <tr class="curso">
-                <td width="42%" class="nombreCurso">
+                <td width="30%" class="nombreCurso">
                    <a target="_blank" id="nombre" name="<%= rta[i].nombre %>">
                      <%= rta[i].nombre %></a>
 
                 </td><td>
-                 <b>Autor:</b> <%= rta[i].creador %> - <%= rta[i].correo %>
-                    - <b>Fecha:</b> <%= rta[i].fecha %>
-                    <hr class="listado"/>
+
+                  <b>Descripción:</b> <%= rta[i].descripcion %><br/>
+                  <b>Autor:</b> <%= rta[i].creador %> - <%= rta[i].correo %>
+                      - <b>Creado:</b> <%= rta[i].fecha %><br/>
+                    <!--<hr class="listado"/>-->
                     </td>
 
                   </tr>
@@ -31,7 +40,7 @@
           <% } else{ %>
             <i>-- Empty -- </i>
             <% } %>
-        </div> <br/>
+        </div>
         <script src="js/indexListado.js"></script>
 
   </body>

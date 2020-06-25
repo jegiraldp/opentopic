@@ -38,7 +38,8 @@ div#centro{
   float:left;
   padding: 8px 20px;
 
-  border: 0px solid #ccc;
+
+  border: 1px solid #ccc;
   border-radius: 4px;
 
 }
@@ -65,16 +66,30 @@ hr.listado{
 }
 
 table#tablaInicio{
-  width: 98%;
+  width: 100%;
+  border-collapse: collapse;
+  //border: 1px solid #AAAAAA;
+
 }
 
+table#tablaInicio tr:nth-child(even) {
+//  background: #f5f5f5;
+}
 
-tr.curso{
-  font-size: 13px;
+tr.curso td, tr th{
+  border-bottom:1pt solid #ccc;
+
+
+}
+
+tr.curso td{
+  font-size: 14px;
+  padding-bottom: 15px;
 }
 
 tr.curso:hover{
-  background-color: #fcf7e5;
+  background-color: #f9edbe;
+  font-style: italic;
 }
 
 
@@ -87,4 +102,31 @@ a#nombre{
 
 a#nombre:hover{
     text-decoration: underline;
+    font-style: italic;
+}
+
+div#informacion{
+  background-color: #f5f5f5;
+  padding-left: 5px;
+  padding-right: 10px;
+  text-align: justify;
+  color:black;
+  font-size: 16px;
+  letter-spacing: -1px;
+}
+
+div#pie{
+font-weight: bold;
+  //background-color: #f5f5f5;
+  width:99%;
+  height: 45px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  text-align: center;
+  font-size: 1.0rem;
+  letter-spacing: -1px;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  color:#3B2F63;
+  display: inline-block;
 }

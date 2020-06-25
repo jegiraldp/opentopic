@@ -23,7 +23,7 @@ div#titulo{
 }
 
 div#informacion{
-  background-color: #fcf7e5;
+  background-color: #f5f5f5;
   padding-left: 5px;
   padding-right: 10px;
   text-align: justify;
@@ -33,7 +33,7 @@ div#informacion{
 }
 
 li.tema:hover{
-  background-color: #fcf7e5;
+  background-color: #f9edbe;
   font-weight: bold;
   list-style-type: square;
   //color:black;

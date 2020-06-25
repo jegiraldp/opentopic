@@ -5,6 +5,7 @@ const reg = require('./backend/registrarCursoFinal.js');
 const listar = require('./backend/hola.js');
 const lis = require('./backend/listarInicio.js');
 const lisDetalle = require('./backend/listarCursoDetalle.js');
+const lisDetallesOT = require('./backend/listarDetallesOT.js');
 //settings
 app.set('views',__dirname+'/views')
 app.set('public',__dirname+'/public')
@@ -24,7 +25,7 @@ app.get('/',(req,res)=> {
 
 app.post('/curso',(req,res)=> {
   const {nombre} = req.body;
-  const promesaD=lisDetalle.verDetalle(nombre);
+    const promesaD=lisDetalle.verDetalle(nombre);
   promesaD.then(function(rta){
     rta[0].nombre=rta[0].nombre.substring(1);
     rta[0].nombre=rta[0].letra.toUpperCase()+rta[0].nombre;
@@ -36,6 +37,14 @@ app.post('/curso',(req,res)=> {
 app.get('/centro',(req,res)=> {
   //res.write('hola parcero');
   //res.end();
+  var total=0;
+
+  const promesaDot=lisDetallesOT.totalAutores();
+  promesaDot.then(function(rtaDOT){
+
+    total=rtaDOT;
+    //console.log(total);
+  });
   const promesa=lis.verinicio();
     promesa.then(function(rta){
 
@@ -44,7 +53,7 @@ app.get('/centro',(req,res)=> {
         rta[i].nombre=rta[i].letra.toUpperCase()+rta[i].nombre;
       }
 
-      res.render('listadoinicio.ejs',{rta:rta});
+      res.render('listadoinicio.ejs',{rta:rta, total:total});
     });
 });
 
