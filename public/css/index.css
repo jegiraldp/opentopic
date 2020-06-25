@@ -72,14 +72,13 @@ table#tablaInicio{
 
 }
 
-table#tablaInicio tr:nth-child(even) {
-//  background: #f5f5f5;
+table#tablaInicio tr.losTH{
+	text-align:left;
+	color:red;
 }
 
 tr.curso td, tr th{
   border-bottom:1pt solid #ccc;
-
-
 }
 
 tr.curso td{

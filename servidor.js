@@ -1,4 +1,8 @@
 const express = require('express');
+
+var passport = require('passport');
+var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
+
 const app = express();
 const bodyParser = require('body-parser');
 const reg = require('./backend/registrarCursoFinal.js');
@@ -21,6 +25,10 @@ app.get('/',(req,res)=> {
   res.render('index.ejs',{rta:rta});
   //res.write('hola parcero');
   //res.end();
+});
+
+app.get('/google',(req,res)=> {
+  res.send('estamos melos 1');
 });
 
 app.post('/curso',(req,res)=> {
@@ -68,15 +76,17 @@ app.get('/login',(req,res)=> {
 });
 
 
-app.post('/login',(req,res)=> {
+app.post('/login', passport.authenticate('google'),(req,res)=> {
   const {clave} = req.body;
-  var rta="jorge";
+  /*var rta="jorge";
   if(clave=="99"){
   res.render('adminCursoInicio.ejs',{rta:rta});
   }else{
     var rta="Usuario no registrado - comuniquese con su administrador !!"
     res.render('loginFinal.ejs',{rta:rta});
-  }
+  }*/
+
+  res.redirect('/registrarcurso');
 });
 
 app.post('/registrarcurso',(req,res)=> {
